@@ -13,7 +13,7 @@ The details of this method are described in [Vul, Bergsma, & MacLeod (2010)](htt
 
 ## Installation
 
-Copy the code to a local directory.  Then in Matlab navigate to that direcoty and run `setup.m` which will add the current directory to the path, allowing you to access FAST functionality.
+Copy the code in `source/` to a local directory.  Then in Matlab navigate to that direcoty and run `setup.m` which will add the current directory to the path, allowing you to access FAST functionality.
 
 ## Usage
 
