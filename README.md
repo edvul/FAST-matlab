@@ -3,7 +3,7 @@ FAST-matlab
 
 **Functional Adaptive Sequential Testing** toolbox for Matlab
 
-This toolbox is intended for folks conducting multi-trial experiments aimed to estimate thresholds in psychophysics, or wherever else it is necessary, along the way it does Bayesian estimation of threshold and psychometric functions, thus combining, and extending the functionality of [psignifit](http://psignifit.sourceforge.net/) and [QUEST](http://psych.nyu.edu/pelli/software.html).
+This toolbox is intended for folks conducting multi-trial experiments aimed to estimate thresholds in psychophysics, or wherever else it is necessary. Along the way it does Bayesian estimation of threshold and psychometric functions, thus combining, and extending the functionality of [psignifit](http://psignifit.sourceforge.net/) and [QUEST](http://psych.nyu.edu/pelli/software.html).
 
 **FAST** extends [psignifit](http://psignifit.sourceforge.net/) by jointly estimating the shape of the psychometric function as well as a parametric "threshold function" which describes how the threshold changes with another stimulus variable (e.g., contrast threshold varies as a function of spatial frequency).
 
