@@ -17,7 +17,7 @@ Copy the code in `source/` to a local directory.  Then in Matlab navigate to tha
 
 ## Basic Usage
 
-Forthcoming, a more accessible html manual is forthcoming (maybe), in the meantime you can read the [pdf manual](https://github.com/evule/FAST-matlab/raw/master/manual-latex/FAST-manual.pdf).
+A more thorough html manual is forthcoming (maybe), in the meantime you can read the [pdf manual](https://github.com/evule/FAST-matlab/raw/master/manual-latex/FAST-manual.pdf).
 
 The basic usage involves a sequence of  
 1. initializing the FAST structure by running `fastStart()`  
@@ -61,6 +61,38 @@ By default, with a range specified for parameter values, FAST tries to guess whe
 If we are using a detection experiment to estimate a single threshold on a linear scale, that ought to be somewhere around 1, we would initialize a FAST structure as:  
 `myfast = fastStart(1, 'funcVal', {[0 2], [0.001 1]});`
 
-### 1) Initializaiton
+### Choosing a stimulus value
 
-The initialization step amounts to 
+The basic choice of a stimulus (y) value for some x value(s) is done via `fastChooseY`.  We have fancier methods for choosing stimulus values (including choosing both x and y), but those are more complicated, and perhaps unnecessary.
+
+`y = fastChooseY(faststructure, xs)`
+
+`faststructure` is the FAST structure created in the initialization step  
+`xs` can be a single number or a vector of x values of interest  
+
+#### Simple example:
+
+In our simple example, of estimating a single threshold, x doesn't matter, so we could just plus in 0:  
+`y = fastChooseY(myfast, 0);`
+
+### Update FAST structure
+
+After we get a response (r) for a given x and y value, we update the FAST structure.  r is typically a 0 or a 1.  r=0 would mean "less" in a matching task, or "no" in a detection task, or "incorrect" in an nAFC task, while r=1 would correspond to "more, "yes", or "correct".  
+
+The basic update looks like this:  
+`faststructure = fastUpdate(faststructure, [x y r]);`
+
+#### Simple example:
+
+So, in our case, assuming we got a "yes" resopnse from our subject, we would update with the following command:  
+`myfast = fastUpdate(myfast, [0 y 1]);`
+
+### Obtaining results
+
+You can view data and function fits with `fastPlot(faststructure)`
+
+You can also obtain parameter estimates and confidence intervals with `estimate = fastEstimate(faststructure)`
+
+## Advanced usage.
+
+Please consult the [pdf manual](https://github.com/evule/FAST-matlab/raw/master/manual-latex/FAST-manual.pdf)
