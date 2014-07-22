@@ -1,0 +1,441 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.28)  9 FEB 2010 15:52
+entering extended mode
+\write18 enabled.
+ %&-line parsing enabled.
+**FAST-manual.tex
+(./FAST-manual.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
+tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
+omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
+sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2008/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2008/09/08 v0.04l Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(./FAST-manual.aux)
+\openout1 = `FAST-manual.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 27.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count101
+\scratchdimen=\dimen114
+\scratchbox=\box28
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen115
+\MPnumerator=\count105
+\everyMPtoPDFconversion=\toks22
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1
+
+{/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Missing character: There is no Õ in font phvr7t!
+ [1]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 46.
+
+(./FAST-manual.toc [2
+
+])
+\tf@toc=\write3
+\openout3 = `FAST-manual.toc'.
+
+ [3]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 74.
+ [4
+
+]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 109.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 113.
+ [5] [6]
+Overfull \hbox (25.78793pt too wide) in paragraph at lines 141--142
+[][]\OT1/cmtt/m/n/10 nchoice \OT1/phv/m/n/10 is an in-te-ger spec-i-fy-ing the 
+sort of task be-ing done, in our case []\OT1/cmtt/m/n/10 nchoice = 1\OT1/phv/m/
+n/10 ,
+ []
+
+Missing character: There is no Õ in font phvr7t!
+[7] [8]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.199 ...o  presenting the stimulus.  Thus $y = v_
+                                                  d / v_n$, $x$ is the delay...
+
+? 
+
+Overfull \hbox (98.02393pt too wide) in paragraph at lines 198--200
+\OT1/phv/m/n/10 ward ($\OML/cmm/m/it/10 v[]$\OT1/phv/m/n/10 ) to ob-tain the im
+-me-di-ate re-ward ($\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; to
+computebothportionstopresentingthestimulus:Thus$\OT1/phv/m/n/10 y
+ []
+
+Missing character: There is no Õ in font phvr7t!
+[9] [10]
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 263--263
+[]    \OT1/cmtt/m/n/10 r = input(sprintf('$%2.2f now [1] or $%2.2f in %d days [
+0]', v_n, v_d, x));[] 
+ []
+
+<figures/fastPlot-ed-hyperbolic.pdf, id=49, 453.695pt x 542.025pt>
+File: figures/fastPlot-ed-hyperbolic.pdf Graphic file (type pdf)
+
+<use figures/fastPlot-ed-hyperbolic.pdf>
+! Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.284 ...e psychometric function of $y - y^*(x)$.}
+                                                  
+? 
+Runaway argument?
+\@captype {\def \reserved@a *{\nobreak \@xcentercr }\reserved@a }\def \ETC.
+! Paragraph ended before \@caption was complete.
+<to be read again> 
+                   \par 
+l.284 ...e psychometric function of $y - y^*(x)$.}
+                                                  
+? 
+
+LaTeX Warning: Float too large for page by 35.01775pt on input line 286.
+
+[11] [12 <./figures/fastPlot-ed-hyperbolic.pdf>]
+Overfull \hbox (79.73726pt too wide) in paragraph at lines 302--303
+\OT1/phv/m/n/10 con-tains the marginal mean in the na-tive scale for that pa-ra
+m-e-ter, and []\OT1/cmtt/m/n/10 estimate.marg.quantiles
+ []
+
+[13]
+<figures/fastEstimate-ed-hyperbolic.pdf, id=83, 631.35875pt x 470.75874pt>
+File: figures/fastEstimate-ed-hyperbolic.pdf Graphic file (type pdf)
+
+<use figures/fastEstimate-ed-hyperbolic.pdf>
+! Argument of \@caption has an extra }.
+<inserted text> 
+                \par 
+l.345 ...ter, along with its confidence interval.}
+                                                  
+? 
+Runaway argument?
+\@captype {\def \reserved@a *{\nobreak \@xcentercr }\reserved@a }\def \ETC.
+! Paragraph ended before \@caption was complete.
+<to be read again> 
+                   \par 
+l.345 ...ter, along with its confidence interval.}
+                                                  
+? 
+[14 <./figures/fastEstimate-ed-hyperbolic.pdf>]
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 366--366
+[]\OT1/cmtt/m/n/10 myfast = fastFull(nchoice, funccurve, funcpsych, parameters 
+[, xylims]);[] 
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 395--400
+
+ []
+
+[16] [17] [18] [19]
+Overfull \hbox (0.98618pt too wide) in paragraph at lines 478--479
+[]\OT1/phv/m/n/10 fastUpdate can pro-vide an ad-di-tional out-put (re-sam-ple) 
+which in-di-cates whether
+ []
+
+
+Overfull \hbox (18.93797pt too wide) in paragraph at lines 488--489
+\OT1/phv/m/n/10 this de-ci-sion up to the ex-per-i-menter, but the []\OT1/cmtt/
+m/n/10 fastEstimate \OT1/phv/m/n/10 and []\OT1/cmtt/m/n/10 fastCalcEstimates
+ []
+
+[20]
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 514--514
+[]\OT1/cmtt/m/n/10 if ( ((p1_quantiles(2) - p1_quantiles(1)) < 0.1.*p1_quantile
+s(2)) && ...[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 514--514
+[]     \OT1/cmtt/m/n/10 ((p1_quantiles(3) - p1_quantiles(2)) < 0.1.*p1_quantile
+s(2)))[] 
+ []
+
+
+Overfull \hbox (52.72566pt too wide) in paragraph at lines 516--517
+[]\OT1/phv/m/n/10 Here we run fastEs-ti-mate whiel re-quest-ing only the quan-t
+iles we want ([]\OT1/cmtt/m/n/10 [0.025 0.5 0.975]\OT1/phv/m/n/10 ,
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 590--590
+[]\OT1/cmtt/m/n/10 % (e) the possible range of x (delay) and y (discounting pro
+portion) values[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 590--590
+[]\OT1/cmtt/m/n/10 % note that here we fix the initial and limiting discounting
+ rate (such[] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 590--590
+[]\OT1/cmtt/m/n/10 % that at a delay of 0, the discounting proportion ought ot 
+be 1.0, meaning[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 590--590
+[]\OT1/cmtt/m/n/10 % no discounting should take place; and at a delay of Infini
+ty, the[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 590--590
+[]\OT1/cmtt/m/n/10 % discounting proportion ought to be 0.0, meaning that rewar
+ds after an[] 
+ []
+
+[21]
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 590--590
+[]            \OT1/cmtt/m/n/10 {[0 1 0.0001 1], [0 0 0.0001 1], [1 1 2 21], [1 
+3.0 1 21]}, ...[] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 590--590
+[]    \OT1/cmtt/m/n/10 % choose y for a given x, choose x from a small set, y t
+o achieve a[] 
+ []
+
+
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 590--590
+[]    \OT1/cmtt/m/n/10 r = input(sprintf('$%2.2f now [1] or $%2.2f in %d days [
+0]', v_n, v_d, x));[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 590--590
+[]    \OT1/cmtt/m/n/10 if (i>100) || ... % either more than 100 trials have ela
+psed or...[] 
+ []
+
+[22]
+! You can't use `macro parameter character #' in horizontal mode.
+l.610 ...elity than is generally possible online.#
+                                                  
+? 
+
+Overfull \hbox (19.15436pt too wide) in paragraph at lines 622--623
+[]\OT1/cmtt/m/n/10 fastChooseYent\OT1/phv/m/n/10 , []\OT1/cmtt/m/n/10 fastChoos
+eYp\OT1/phv/m/n/10 , []\OT1/cmtt/m/n/10 fastChooseYpost\OT1/phv/m/n/10 , []\OT1
+/cmtt/m/n/10 fastChooseYvar\OT1/phv/m/n/10 , []\OT1/cmtt/m/n/10 fastCalcYs\OT1/
+phv/m/n/10 :
+ []
+
+
+Overfull \hbox (23.09628pt too wide) in paragraph at lines 622--623
+\OT1/phv/m/n/10 these func-tions al-low for de-tails in-ter-face with the var-i
+-ous ways in which []\OT1/cmtt/m/n/10 fastChooseY
+ []
+
+[23]
+Overfull \hbox (80.24629pt too wide) in paragraph at lines 646--646
+[]\OT1/cmtt/m/n/10 predictedcritvals = params{1} + (params{2} - params{1}).*(1-
+exp(-xs./params{3}));[] 
+ []
+
+[24]
+! Missing } inserted.
+<inserted text> 
+                }
+l.660 ...$: $y^*(x) = \sum_{i=1}^n{P_i x^{(i-1)} $
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+
+ []
+
+! Too many }'s.
+l.683 \end{equation}}
+                     
+? 
+! Too many }'s.
+l.694 \end{equation}}
+                     
+? 
+[25] [26] (./FAST-manual.aux) ) 
+Here is how much of TeX's memory you used:
+ 1912 strings out of 493876
+ 23385 string characters out of 2400567
+ 75656 words of memory out of 3000000
+ 5170 multiletter control sequences out of 10000+50000
+ 30351 words of font info for 65 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 27i,21n,24p,1229b,243s stack positions out of 30000i,500n,10000p,2000000b,80000s
+{/usr/local/texlive/2008/texmf-dist/fonts/enc/dv
+ips/base/8r.enc}</usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmex
+10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></
+usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi5.pfb></usr/local/
+texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-d
+ist/fonts/type1/bluesky/cm/cmr5.pfb></usr/local/texlive/2008/texmf-dist/fonts/t
+ype1/bluesky/cm/cmr7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesk
+y/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy
+7.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmtt10.pfb></u
+sr/local/texlive/2008/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/loca
+l/texlive/2008/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texli
+ve/2008/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on FAST-manual.pdf (27 pages, 229425 bytes).
+PDF statistics:
+ 176 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {0.1}Overview}{4}
+\contentsline {section}{\numberline {0.2}Framework}{4}
+\contentsline {section}{\numberline {0.3}Installation}{5}
+\contentsline {section}{\numberline {0.4}Basic Usage: Getting Data}{5}
+\contentsline {subsection}{\numberline {0.4.1}What you need to know}{6}
+\contentsline {subsection}{\numberline {0.4.2}Example: \\Basic threshold estimation in a detection task}{7}
+\contentsline {subsection}{\numberline {0.4.3}Example: \\Basic estimation of a hyperbolic decay in a matching task}{9}
+\contentsline {section}{\numberline {0.5}Basic Usage: Obtaining results}{10}
+\contentsline {subsection}{\numberline {0.5.1}Viewing data and function fits}{11}
+\contentsline {subsection}{\numberline {0.5.2}Obtaining parameter estimates and confidence intervals}{11}
+\contentsline {section}{\numberline {0.6}Advanced use}{14}
+\contentsline {subsection}{\numberline {0.6.1}Create FAST structure}{15}
+\contentsline {subsection}{\numberline {0.6.2}Choose a stimulus}{17}
+\contentsline {subsection}{\numberline {0.6.3}Update FAST structure}{19}
+\contentsline {subsection}{\numberline {0.6.4}Stop the experiment}{20}
+\contentsline {subsection}{\numberline {0.6.5}Advanced Example}{21}
+\contentsline {section}{\numberline {0.7}Function List}{23}
+\contentsline {subsection}{\numberline {0.7.1}Basic usage}{23}
+\contentsline {subsection}{\numberline {0.7.2}Additional advanced usage functions}{23}
+\contentsline {subsection}{\numberline {0.7.3}Functions in the guts of FAST}{24}
+\contentsline {subsection}{\numberline {0.7.4}Threshold functions: funccurve}{24}
+\contentsline {subsection}{\numberline {0.7.5}Psychometric functions: funcpsych}{26}
