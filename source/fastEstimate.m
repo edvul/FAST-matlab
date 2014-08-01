@@ -168,7 +168,7 @@ if(~QUIET==0)
 %             CIs = estimate.margXC.quantiles;
     end
     for i =[1:fast.params.n]
-        if(range(fast.params.core.pvals{i}) > 0)
+        if((max(fast.params.core.pvals{i}) - min(fast.params.core.pvals{i})) > 0)
             subplot(fast.params.n, fast.params.n, (i-1)*fast.params.n + i);
 
             marg = 10.^(fast.params.core.log10lh - max(fast.params.core.log10lh(:))); % convert to probability
@@ -226,7 +226,7 @@ if(~QUIET==0)
             % slope becomes shallow...but the true contours are checked using
             % contour below, and they seem to agree well enough in practice:
             for j = [i+1:fast.params.n]
-                if(range(fast.params.core.pvals{j}) > 0)
+                if((max(fast.params.core.pvals{j}) - min(fast.params.core.pvals{j})) > 0)
                     subplot(fast.params.n, fast.params.n, (j-1)*fast.params.n + i);
                     if(length(fast.params.core.pvals{i}) >= 3 && length(fast.params.core.pvals{j}) >= 3)
 
