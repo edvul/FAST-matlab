@@ -42,8 +42,8 @@ function Y = fastChooseY(fast, x, method)
     switch(method)
         case {'int'} % fastChooseYp(fast, x, p)
             % first, which p?
-            ps = randsample([.4 .5 .6],1); % randomly choose p near 50% mark... 
-            ps = fastPsyScale(ps(1), fast.params.nchoice, 0); % scale as needed
+ 			ps = [.4 .5 .6];
+            ps = fastPsyScale(ps(ceil(rand(1,1)*length(ps))), fast.params.nchoice, 0); % scale as needed
             
             Y = fastChooseYp(fast, x, ps);
             

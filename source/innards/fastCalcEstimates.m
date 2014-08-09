@@ -33,14 +33,14 @@ function [est resamp]=fastCalcEstimates(fast)
     
 %% Compute marginals 
     [est.marg r1] = calcMarginals(mpt, pvals);
-    resamp = min(1, resamp+r1);
+    resamp = min(1, resamp+r1);  
     
 %% Compute marginal XC through the mode
 %      est.margXC = calcMarginalXCs(mpt, maxindices, pvals);
         
 %% Compute quadratic approximation of loglh grid around max lattice point.
     [est.gauss r1] = calcGaussian(fast.params.core.log10lh, pvals);
-    resamp = min(1, resamp+r1);
+    resamp = min(1, resamp+r1); 
     
 %% save parameter estimates in their linear designation
     for i=[1:fast.params.n]
@@ -69,8 +69,8 @@ function [marginals resamp] = calcMarginals(P, pvals)
         
         if((pvals{i}(1) > (marginals.mu(i) - marginals.sd(i))) || ...
            (pvals{i}(end) < (marginals.mu(i) + marginals.sd(i)))) % if mean is not more than 1 SD away from edge, consider at edge... should expand range or move mean...
-            resamp = 1;
-        elseif((max(pvals{i})-min(pvals{i}))/marginals.sd(i) > 6) % if lattice is too broad (>6 sds)... 
+            resamp = 1; 
+        elseif((max(pvals{i})-min(pvals{i}))/marginals.sd(i) > 8) % if lattice is too broad; could relate to length(pvals() (>6 sds)...  
             resamp = 1;
         end
     end

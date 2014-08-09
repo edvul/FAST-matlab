@@ -36,9 +36,7 @@
 %       offdiagonals equal to zero.
 %   Empirical Integration and Interpolation (estimate.interp.*):
 %       Interpolating the approximated integral of the cross section
-%       through the mode.  Unlike all of the above methods, this does not
-%       make a gaussian assumption -- in theory these should be most
-%       reliable; this needs to be tested.
+%       through the mode.  
 %   For each of these there will be at least a quantiles cell-array which
 %   will contain the parameter values corresponding to the requested or
 %   default quantiles.  Also, each will contain parameters of the
@@ -75,8 +73,8 @@ function estimate = fastEstimate(fast, quantileLevels, RESAMPLEFLAG, QUIET)
     if(any(GRIDSAMP == 2))
         error('ERROR: fastEstimate currently does not work with structures with sampling densities < 3');
     end
-    if RESAMPLEFLAG
-        fast = fastResample(fast, defaultGridSamp, defaultNsigmarange);  
+    if(RESAMPLEFLAG)
+        [fast RESAMPLEFLAG]   = fastResample(fast, defaultGridSamp, defaultNsigmarange);  % can be insufficient...
     end
 
 
@@ -107,8 +105,7 @@ function estimate = fastEstimate(fast, quantileLevels, RESAMPLEFLAG, QUIET)
     [maxindices{1:fast.params.n}] = ind2sub(size(fast.params.core.log10lh),maxindex);
     
     for i = [1:fast.params.n]
-        if(range(fast.params.core.pvals{i}) > 0) % is not a singular value (either by weird sampling, or, more likely, by fixing the parameter)
-
+        if((max(fast.params.core.pvals{i}) - min(fast.params.core.pvals{i})) > 0) % is not a singular value (either by weird sampling, or, more likely, by fixing the parameter)
             pts = maxindices;
             pts{i} = [1:length(fast.params.core.pvals{i})];
             llhxc = reshape(squeeze(fast.params.core.log10lh(pts{:})), size(fast.params.core.pvals{i})); % llhxc is log10
@@ -151,21 +148,19 @@ function estimate = fastEstimate(fast, quantileLevels, RESAMPLEFLAG, QUIET)
     end
 
 %% plot
-if(~QUIET==0)
+if(~QUIET)
     QUIET
     figure();
     pvals = fast.params.core.pvals;
     
-    % which confidence intervals to plot?
+    % which confidence intervals to plot? Gauss is apt to fail in the
+    % tails, so interp is better: see fastsettings to select 
+
     switch(estimatePLOTCI)
         case {0}
             CIs = estimate.interp.quantiles;
         case {1}
             CIs = estimate.gauss.quantiles;
-%         case {2}
-%             CIs = estimate.marg.quantiles;
-%         case {3}
-%             CIs = estimate.margXC.quantiles;
     end
     for i =[1:fast.params.n]
         if((max(fast.params.core.pvals{i}) - min(fast.params.core.pvals{i})) > 0)
@@ -177,19 +172,13 @@ if(~QUIET==0)
             marg = log10(marg); % convert back to log ps
             margll = marg - max(marg(:)); % scale
 
-%             % ## remove later, when cumtrapz works
-%             pts = maxindices;
-%             pts{i} = [1:length(pvals{i})];
-%             llhxc = reshape(squeeze(fast.params.core.log10lh(pts{:})), size(pvals{i})); % llhxc is log10
-
             plot(pvals{i}, margll, 'b'); % marginal
             hold on;
-%             plot(pvals{i}, llhxc-max(llhxc), 'r');  % relative llh10 vs param, XC thru mode
 
             if(fast.params.islog{i} == 1)
-                m = 10.^estimate.gauss.mu(i);
+                mx = 10.^estimate.gauss.mu(i);
             else
-                m = estimate.gauss.mu(i);
+                mx = estimate.gauss.mu(i);
             end
             close1 = (pvals{i} - min(CIs{i})).^2;
             close2 = (pvals{i} - max(CIs{i})).^2;
@@ -202,7 +191,7 @@ if(~QUIET==0)
             axisdims(3) = 1.3*(ciylevel-eps); % leave room below ci ylevel
             axis(axisdims);
 
-            plot([m m], [0 axisdims(3)], 'k', 'LineWidth', 2); % Quadratic peak
+            plot([mx mx], [0 axisdims(3)], 'k', 'LineWidth', 2); % Quadratic peak
             xarea = [min(CIs{i}) max(CIs{i})];
             z = fill([xarea fliplr(xarea)], ...
                 [0 0 axisdims(3) axisdims(3)], [.3 .3 .3], 'LineStyle', 'none');
@@ -219,12 +208,6 @@ if(~QUIET==0)
             end
             ylabel('Log10 likelihood');
 
-            %% plot confidence ellipses...inexact given marginal
-            %% approximation
-            % ellipses are particularly inexact for planes involving the psy slope
-            % parameter, since the contours in that should in principle diverge as
-            % slope becomes shallow...but the true contours are checked using
-            % contour below, and they seem to agree well enough in practice:
             for j = [i+1:fast.params.n]
                 if((max(fast.params.core.pvals{j}) - min(fast.params.core.pvals{j})) > 0)
                     subplot(fast.params.n, fast.params.n, (j-1)*fast.params.n + i);
@@ -232,17 +215,7 @@ if(~QUIET==0)
 
                         xp = fast.params.core.pvals{i};
                         yp = fast.params.core.pvals{j};
-                        if(fast.params.islog{i})
-                            xf = log10(xp);
-                        else
-                            xf = xp;
-                        end
-                        if(fast.params.islog{j})
-                            yf = log10(yp);
-                        else
-                            yf = yp;
-                        end
-                        
+
                         ll = fast.params.core.log10lh - max(fast.params.core.log10lh(:));
                         Pl = 10.^ll;
                         Pl = Pl ./ sum(Pl(:));
@@ -252,7 +225,6 @@ if(~QUIET==0)
                             end
                         end
                         Pl = squeeze(Pl);
-                        
                         LL = log10(Pl);
                         z = LL - max(LL(:));
                         
@@ -266,61 +238,42 @@ if(~QUIET==0)
                         view(0, 90);
                         % Makes yp or j parameter the vertical axis...
                         v = axis;
-                        % prototypical non-elliptical form for yp = psy, xp and yp both
-                        % 1:70; if c small, nearly elliptical over many sigma z = ((xp
-                        % - mean(mean(xp)))./(yp)).^2  +... c*((yp -
-                        % mean(mean(yp)))./(max(max(yp)))).^2
 
-
-                        [mu covar] = quadEst({xf yf}, z); % 2 and 2x2
-
-                        if((det(covar)>0) && ~(any(diag(covar)<=0)))
-                            n=100; % Number of points around ellipse
-                            p=pi/n:pi/n:2*pi; % angles around a circle;
-                            [eigvec,eigval] = eig(covar); % Compute eigen-stuff
-                            xy = [cos(p'),sin(p')] * sqrt(eigval) * eigvec'; % Transformation; eigvals are x,y (co)variances
-                            x = xy(:,1);
-                            y = xy(:,2);
-                            zval = max(x)./sqrt(eigval(1,1));
-                            zval2 = max(y)./sqrt(eigval(2,2));
-                            % Standard normal deviate along above ellipse contour is
-                            % max(x)/sigmax. ? Why not also *exactly* max(y)/sigmay?
-                            % Circular standard normal distn has exp(-r^2/2) of its
-                            % volume outside radius r, hence at .05 point, r should be
-                            % sqrt(5.99) instead of zval; and at .25 point, sqrt(2.77).
-                            l = length(quantileLevels);
-                            for z = [1:ceil(l/2)]
-                                if((quantileLevels(z) + quantileLevels(l+1-z)) == 1) % quantile pair.
-                                    p = min(quantileLevels(z), 1-quantileLevels(z))*2; % 2 tail prob
-                                    k = sqrt(-2*log(p-.001))/zval; %.001 to eps
-                                    if(fast.params.islog{i})
-                                        xpl = 10.^((mu(1)+k*x));
-                                    else
-                                        xpl = (mu(1)+k*x);
-                                    end
-                                    if(fast.params.islog{j})
-                                        ypl = 10.^((mu(2)+k*y));
-                                    else
-                                        ypl = (mu(2)+k*y);
-                                    end
-                                    plot(xpl,ypl, CIcolors{mod(z-1, length(CIcolors))+1}, 'LineWidth', 2);
-                                    hold on;
+                        n=100; % Number of points around ellipse
+                        p=pi/n:pi/n:2*pi; % angles around a circle;
+                        zval = 1 ;
+                        % Circular standard normal distn has exp(-r^2/2) of its
+                        % volume outside radius r, hence at .05 point, r should be
+                        % sqrt(5.99) instead of zval; and at .25 point, sqrt(2.77).
+                        l = length(quantileLevels);
+                        for pcritindex = [1:ceil(l/2)]
+                            if((quantileLevels(pcritindex) + quantileLevels(l+1-pcritindex)) == 1) % quantile pair.
+                                pcrit = min(quantileLevels(pcritindex), 1-quantileLevels(pcritindex))*2; % 2 tail prob
+                                zval = sqrt(-2*log(pcrit - .001)); %.001 to eps
+                                xpl = fast.params.est.gauss.mu(i)+zval*cos(p')*fast.params.est.gauss.sd(i);
+                                ypl = fast.params.est.gauss.mu(j)+zval*sin(p')*fast.params.est.gauss.sd(j);
+                                if(fast.params.islog{i})
+                                    xpl = 10.^xpl;
                                 end
+                                if(fast.params.islog{j})
+                                    ypl = 10.^ypl;
+                                end
+                                plot(xpl,ypl, CIcolors{mod(pcritindex-1, length(CIcolors))+1}, 'LineWidth', 2);
+                                hold on;
                             end
-                            axis tight;
-                            if(i<fast.params.n) % current is a curve parameter
-                                xlabel(sprintf('Curve param %d', i));
-                            else % current is the psych parameters
-                                xlabel(sprintf('%s slope param', func2str(fast.func.psych)));
-                            end
-                            if(j<fast.params.n) % current is a curve parameter
-                                ylabel(sprintf('Curve param %d', j));
-                            else % current is the psych parameters
-                                ylabel(sprintf('%s slope param', func2str(fast.func.psych)));
-                            end
-                        else
-                            fprintf('\nWARNING: Co-Plot %d-%d\nSome sigmas are negative, meaning the log likelihood \nis not properly convex, perhaps we are at a saddle point?\n', i, j);
                         end
+                        axis tight;
+                        if(i<fast.params.n) % current is a curve parameter
+                            xlabel(sprintf('Curve param %d', i));
+                        else % current is the psych parameters
+                            xlabel(sprintf('%s slope param', func2str(fast.func.psych)));
+                        end
+                        if(j<fast.params.n) % current is a curve parameter
+                            ylabel(sprintf('Curve param %d', j));
+                        else % current is the psych parameters
+                            ylabel(sprintf('%s slope param', func2str(fast.func.psych)));
+                        end
+                        
                     end
                 end
             end
